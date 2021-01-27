@@ -18,23 +18,28 @@ void setup() {
 }
 
 void loop() {
+// Alternatively the flow here could be press, delay, release within the same if statement
+// This would be an option if the catchall release is not effective 
   // MACRO_1 - DISCORD MUTE //
   if (digitalRead(MACRO_1) == LOW) {
     Keyboard.press(KEY_LEFT_CTRL);
     Keyboard.press(KEY_LEFT_SHIFT);
-    Keyboard.press(KEY_LEFT_CTRL);
+    Keyboard.press('m');
   }
-  // MACRO_2 //
+  // MACRO_2  //
   if (digitalRead(MACRO_2) == LOW) {
-    Keyboard.press(KEY_UP_ARROW);
+    Keyboard.press(KEY_LEFT_GUI);
+    Keyboard.press(KEY_F22);
   }
-  // MACRO_3 //
+  // MACRO_3 - VM STARTUP //
   if (digitalRead(MACRO_3) == LOW) {
-    Keyboard.press(KEY_LEFT_CTRL);
+    Keyboard.press(KEY_LEFT_GUI);
+    Keyboard.press(KEY_F23);
   }
-  // MACRO_4 //
+  // MACRO_4 - UPDATE DISTRO//
   if (digitalRead(MACRO_4) == LOW) {
-    Keyboard.press(KEY_LEFT_ARROW);
+    Keyboard.press(KEY_LEFT_GUI);
+    Keyboard.press(KEY_F24);
   }
   else {
     Keyboard.releaseAll();
