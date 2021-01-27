@@ -1,4 +1,4 @@
-# Arduino Keypad
+# Arduino Macropad
 
 ## Purpose:
 A small four button hotkey pad using an Arduino Micro capable of various key shortcuts and functions.
