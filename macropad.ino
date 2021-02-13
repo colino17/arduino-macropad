@@ -22,26 +22,30 @@ void loop() {
 // This would be an option if the catchall release is not effective 
   // MACRO_1 - DISCORD MUTE //
   if (digitalRead(MACRO_1) == LOW) {
-    Keyboard.press(KEY_LEFT_CTRL);
-    Keyboard.press(KEY_LEFT_SHIFT);
-    Keyboard.press('m');
+    Keyboard.write(KEY_F21);
+    delay(5);
+    Keyboard.releaseAll();
+    delay(2000);
   }
   // MACRO_2  //
   if (digitalRead(MACRO_2) == LOW) {
-    Keyboard.press(KEY_LEFT_GUI);
-    Keyboard.press(KEY_F22);
+    Keyboard.write(KEY_F22);
+    delay(5);
+    Keyboard.releaseAll();
+    delay(2000);
   }
   // MACRO_3 - VM STARTUP //
   if (digitalRead(MACRO_3) == LOW) {
-    Keyboard.press(KEY_LEFT_GUI);
-    Keyboard.press(KEY_F23);
+    Keyboard.write(KEY_F23);
+    delay(5);
+    Keyboard.releaseAll();
+    delay(2000);
   }
   // MACRO_4 - UPDATE DISTRO//
   if (digitalRead(MACRO_4) == LOW) {
-    Keyboard.press(KEY_LEFT_GUI);
-    Keyboard.press(KEY_F24);
-  }
-  else {
+    Keyboard.write(KEY_F24);
+    delay(5);
     Keyboard.releaseAll();
+    delay(2000);
   }
 }
