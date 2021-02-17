@@ -20,30 +20,30 @@ void setup() {
 void loop() {
 // Alternatively the flow here could be press, delay, release within the same if statement
 // This would be an option if the catchall release is not effective 
-  // MACRO_1 - DISCORD MUTE //
+  // MACRO_1 - DISCORD MUTE - i3 KEYCODE 198 //
   if (digitalRead(MACRO_1) == LOW) {
+    Keyboard.write(KEY_F20);
+    delay(5);
+    Keyboard.releaseAll();
+    delay(2000);
+  }
+  // MACRO_2 - i3 KEYCODE 199 //
+  if (digitalRead(MACRO_2) == LOW) {
     Keyboard.write(KEY_F21);
     delay(5);
     Keyboard.releaseAll();
     delay(2000);
   }
-  // MACRO_2  //
-  if (digitalRead(MACRO_2) == LOW) {
+  // MACRO_3 - VM STARTUP - i3 KEYCODE 200//
+  if (digitalRead(MACRO_3) == LOW) {
     Keyboard.write(KEY_F22);
     delay(5);
     Keyboard.releaseAll();
     delay(2000);
   }
-  // MACRO_3 - VM STARTUP //
-  if (digitalRead(MACRO_3) == LOW) {
-    Keyboard.write(KEY_F23);
-    delay(5);
-    Keyboard.releaseAll();
-    delay(2000);
-  }
-  // MACRO_4 - UPDATE DISTRO//
+  // MACRO_4 - UPDATE DISTRO - i3 KEYCODE 198//
   if (digitalRead(MACRO_4) == LOW) {
-    Keyboard.write(KEY_F24);
+    Keyboard.write(KEY_F23);
     delay(5);
     Keyboard.releaseAll();
     delay(2000);
