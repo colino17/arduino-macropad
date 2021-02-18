@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "System Update!"
+
 ############
 # PASSWORD #
 ############
