@@ -41,7 +41,7 @@ void loop() {
     Keyboard.releaseAll();
     delay(2000);
   }
-  // MACRO_4 - UPDATE DISTRO - i3 KEYCODE 198//
+  // MACRO_4 - UPDATE DISTRO - i3 KEYCODE 201//
   if (digitalRead(MACRO_4) == LOW) {
     Keyboard.write(KEY_F23);
     delay(5);
